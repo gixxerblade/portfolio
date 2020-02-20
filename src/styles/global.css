@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+.frontpagewrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 3em;
+}
+.typedString {
+  color: black;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px;
+}
+.hi,
+.letstalk {
+  margin: 10px;
+}
