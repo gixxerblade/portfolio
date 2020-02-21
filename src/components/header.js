@@ -7,11 +7,13 @@ import { MailSend } from "styled-icons/boxicons-regular/MailSend"
 import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
 import { DevTo } from "styled-icons/boxicons-logos/DevTo"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
-const Header = ({ siteTitle }) => (
+import Burger from "./burger"
+const Header = ({ siteTitle, open, setOpen  }) => (
   <header
     style={{
       background: `black`,
       marginBottom: `0rem`,
+      height:'10em'
     }}
   >
     <StyledHeadDiv
@@ -49,6 +51,7 @@ const Header = ({ siteTitle }) => (
           </a>
         </StyledNav>
       </StyledH1>
+      <Burger open={open} setOpen={setOpen} />
     </StyledHeadDiv>
   </header>
 )

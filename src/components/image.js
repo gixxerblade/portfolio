@@ -18,7 +18,7 @@ const Image = () => {
     query {
       bgimage: file(relativePath: { eq: "ireland.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1024) {
+          fluid(maxWidth: 1024, grayscale: true) {
             ...GatsbyImageSharpFluid
           }
         }

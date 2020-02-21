@@ -16,20 +16,27 @@ const Navbar = () => (
     <Link className="navlink" to="contact">
       Hire Me
     </Link>
-    <hr />
   </StyledDiv>
 )
 export default Navbar
 
 const StyledDiv = styled.div`
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   line-height: 2em;
   color: white;
   font-family: "Roboto Mono", monospace;
-  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+
   .navlink {
     text-decoration: none;
     background-color: transparent;
@@ -39,6 +46,7 @@ const StyledDiv = styled.div`
     text-transform: uppercase;
     transition: 0.3s;
     -webkit-transition: 0.3s;
+    margin-top: 4em;
   }
   .navlink::before,
   .navlink::after {
