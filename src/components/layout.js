@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, {useState} from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./navbar"
@@ -14,9 +14,9 @@ import "./layout.css"
 import StyledFullBackground from "./fullbackground"
 import styled from "styled-components"
 import { Link } from "gatsby"
-const Layout = ({ children }) => {
-  const [open, setOpen] = useState(false);
+import OpenProvider from "./openContext"
 
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,31 +29,31 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header open={open} setOpen={setOpen} siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: "100%",
-        }}
-      >
-        {" "}
-        <StyledFullBackground>
-          <Navbar open={open} setOpen={setOpen} />
-          <main>{children}</main>
-        </StyledFullBackground>
-        <StyledFooter>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            © {new Date().getFullYear()} {data.site.siteMetadata.title}
-            {` `}
-          </Link>
-        </StyledFooter>
-      </div>
+      <OpenProvider>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: "100%",
+          }}
+        >
+            <Navbar />
+            <StyledFullBackground>
+            <main>{children}</main>
+            </StyledFullBackground>
+          <StyledFooter>
+            <Link
+              to="/"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+              }}
+            >
+              © {new Date().getFullYear()} {data.site.siteMetadata.title}
+            </Link>
+          </StyledFooter>
+        </div>
+      </OpenProvider>
     </>
   )
 }

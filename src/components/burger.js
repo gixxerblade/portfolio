@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
+import { OpenContext } from "./openContext"
 import { StyledBurger } from "./burger.styled"
-import { bool, func } from 'prop-types';
 
-const Burger = ({ open, setOpen }) => {
+const Burger = () => {
+  const [open, setOpen] = useContext(OpenContext)
   return (
     <>
       <StyledBurger onClick={() => setOpen(!open)}>
@@ -13,9 +14,4 @@ const Burger = ({ open, setOpen }) => {
     </>
   )
 }
-Burger.propTypes = {
-  open: bool.isRequired,
-  setOpen: func.isRequired,
-};
-
 export default Burger

@@ -8,53 +8,56 @@ import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
 import { DevTo } from "styled-icons/boxicons-logos/DevTo"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import Burger from "./burger"
-const Header = ({ siteTitle, open, setOpen  }) => (
-  <header
-    style={{
-      background: `black`,
-      marginBottom: `0rem`,
-      height:'10em'
-    }}
-  >
-    <StyledHeadDiv
+
+const Header = ({ siteTitle }) => {
+  return (
+    <header
       style={{
-        margin: `0 auto`,
-        maxWidth: "100%",
-        padding: `1.45rem 1.0875rem`,
+        background: `black`,
+        marginBottom: `0rem`,
+        height: "10em",
       }}
     >
-      <StyledH1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-        <StyledNav>
-          <a href="mailto:sdclarkie@gmail.com">
-            <StyledMailSend />
-          </a>
-          <a href="https://github.com/gixxerblade">
-            <StyledGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/stephen-clark-5319406/">
-            <StyledLinkedIn />
-          </a>
-          <a href="https://twitter.com/gixxerblade">
-            <StyledTwitter />
-          </a>
-          <a href="https://dev.to/gixxerblade">
-            <StyledDevTo />
-          </a>
-        </StyledNav>
-      </StyledH1>
-      <Burger open={open} setOpen={setOpen} />
-    </StyledHeadDiv>
-  </header>
-)
+      <StyledHeadDiv
+        style={{
+          margin: `0 auto`,
+          maxWidth: "100%",
+          padding: `1.45rem 1.0875rem`,
+        }}
+      >
+        <StyledH1 style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+          <StyledNav>
+            <a href="mailto:sdclarkie@gmail.com">
+              <StyledMailSend />
+            </a>
+            <a href="https://github.com/gixxerblade">
+              <StyledGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/stephen-clark-5319406/">
+              <StyledLinkedIn />
+            </a>
+            <a href="https://twitter.com/gixxerblade">
+              <StyledTwitter />
+            </a>
+            <a href="https://dev.to/gixxerblade">
+              <StyledDevTo />
+            </a>
+          </StyledNav>
+        </StyledH1>{" "}
+        <Burger />
+      </StyledHeadDiv>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -87,7 +90,7 @@ const StyledGithub = styled(Github)`
   color: white;
   width: 1em;
   &:hover {
-    color: #66ff00 ;
+    color: #66ff00;
     transform: scale(1.2);
   }
 `
@@ -95,7 +98,7 @@ const StyledMailSend = styled(MailSend)`
   color: white;
   width: 1em;
   &:hover {
-    color: #66ff00 ;
+    color: #66ff00;
     transform: scale(1.2);
   }
 `
@@ -103,7 +106,7 @@ const StyledLinkedIn = styled(LinkedinSquare)`
   color: white;
   width: 1em;
   &:hover {
-    color: #66ff00 ;
+    color: #66ff00;
     transform: scale(1.2);
   }
 `
@@ -111,7 +114,7 @@ const StyledDevTo = styled(DevTo)`
   color: white;
   width: 1em;
   &:hover {
-    color: #66ff00 ;
+    color: #66ff00;
     transform: scale(1.2);
   }
 `
@@ -119,7 +122,7 @@ const StyledTwitter = styled(Twitter)`
   color: white;
   width: 1em;
   &:hover {
-    color: #66ff00 ;
+    color: #66ff00;
     transform: scale(1.2);
   }
 `

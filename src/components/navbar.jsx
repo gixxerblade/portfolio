@@ -1,23 +1,28 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import "../styles/global.css"
-const Navbar = () => (
-  <StyledDiv>
-    <Link className="navlink" to="/">
-      Home
-    </Link>
-    <Link className="navlink" to="aboutme">
-      About Me
-    </Link>
-    <Link className="navlink" to="projects">
-      Projects
-    </Link>
-    <Link className="navlink" to="contact">
-      Hire Me
-    </Link>
-  </StyledDiv>
-)
+import { OpenContext } from "./openContext"
+
+const Navbar = () => {
+  const [open] = useContext(OpenContext)
+  return (
+    <StyledDiv open={open}>
+      <Link className="navlink" to="/">
+        Home
+      </Link>
+      <Link className="navlink" to="aboutme">
+        About Me
+      </Link>
+      <Link className="navlink" to="projects">
+        Projects
+      </Link>
+      <Link className="navlink" to="contact">
+        Hire Me
+      </Link>
+    </StyledDiv>
+  )
+}
 export default Navbar
 
 const StyledDiv = styled.div`
@@ -28,14 +33,13 @@ const StyledDiv = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   position: absolute;
   align-items: center;
-  top: 0;
+  top: 10em;
   right: 0;
-  z-index: 10;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(100%);
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
 
   .navlink {
     text-decoration: none;
