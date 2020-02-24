@@ -36,8 +36,10 @@ const StyledDiv = styled.div`
   justify-content: flex-start;
   position: absolute;
   align-items: center;
+  overflow-x: hidden;
   top: 10em;
   right: 0;
+  z-index: 1;
   transition: transform 0.3s ease-in-out;
   transform: ${({ opened }) => opened ? 'translateX(0)' : 'translateX(100%)'};
 

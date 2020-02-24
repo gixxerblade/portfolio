@@ -1,8 +1,4 @@
 .burger {
-  position: absolute;
-  align-self: inherit;
-  top: 13.6%;
-  right: 1.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -13,6 +9,7 @@
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  margin-left: 1rem;
 }
 .burger:focus {
   outline: none;
