@@ -3,9 +3,9 @@ import React, { useState } from "react"
 export const OpenContext = React.createContext()
 
 const OpenProvider = ({ children }) => {
-  const [open, setOpen] = useState(false)
+  const [opened, setOpened] = useState(false)
   return (
-    <OpenContext.Provider value={[open, setOpen]}>
+    <OpenContext.Provider value={[opened, setOpened]}>
       {children}
     </OpenContext.Provider>
   )
