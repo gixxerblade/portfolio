@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-
 import BackgroundImage from "gatsby-background-image"
 import { StyledFullScreenWrapper } from "./SharedStyledComponents"
 
@@ -19,7 +18,7 @@ const FullBackground = ({ className, children }) => {
         desktop: file(relativePath: { eq: "ireland.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -55,7 +54,6 @@ const StyledFullBackground = styled(FullBackground)`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1;
 `
 
 export default StyledFullBackground

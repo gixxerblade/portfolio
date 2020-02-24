@@ -10,12 +10,11 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./navbar"
 import Header from "./header"
-import "./layout.css"
+import "../styles/layout.css"
 import StyledFullBackground from "./fullbackground"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import OpenProvider from "./openContext"
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -37,10 +36,11 @@ const Layout = ({ children }) => {
             maxWidth: "100%",
           }}
         >
-            <Navbar />
-            <StyledFullBackground>
+          {" "}
+          <Navbar />
+          <StyledFullBackground>
             <main>{children}</main>
-            </StyledFullBackground>
+          </StyledFullBackground>
           <StyledFooter>
             <Link
               to="/"

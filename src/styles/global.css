@@ -22,4 +22,5 @@
 .hi,
 .letstalk {
   margin: 10px;
+  z-index: 99;
 }

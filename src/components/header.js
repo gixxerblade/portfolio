@@ -8,14 +8,14 @@ import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
 import { DevTo } from "styled-icons/boxicons-logos/DevTo"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import Burger from "./burger"
-
+import "../styles/header.css"
 const Header = ({ siteTitle }) => {
   return (
     <header
       style={{
         background: `black`,
         marginBottom: `0rem`,
-        height: "10em",
+        height: "8em",
       }}
     >
       <StyledHeadDiv
@@ -35,25 +35,25 @@ const Header = ({ siteTitle }) => {
           >
             {siteTitle}
           </Link>
-          <StyledNav>
-            <a href="mailto:sdclarkie@gmail.com">
-              <StyledMailSend />
-            </a>
-            <a href="https://github.com/gixxerblade">
-              <StyledGithub />
-            </a>
-            <a href="https://www.linkedin.com/in/stephen-clark-5319406/">
-              <StyledLinkedIn />
-            </a>
-            <a href="https://twitter.com/gixxerblade">
-              <StyledTwitter />
-            </a>
-            <a href="https://dev.to/gixxerblade">
-              <StyledDevTo />
-            </a>
-          </StyledNav>
-        </StyledH1>{" "}
-        <Burger />
+        </StyledH1>
+        <StyledNav>
+          <a href="mailto:sdclarkie@gmail.com">
+            <StyledMailSend />
+          </a>
+          <a href="https://github.com/gixxerblade">
+            <StyledGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/stephen-clark-5319406/">
+            <StyledLinkedIn />
+          </a>
+          <a href="https://twitter.com/gixxerblade">
+            <StyledTwitter />
+          </a>
+          <a href="https://dev.to/gixxerblade">
+            <StyledDevTo />
+          </a>
+          <Burger />
+        </StyledNav>
       </StyledHeadDiv>
     </header>
   )
@@ -72,31 +72,36 @@ export default Header
 const StyledHeadDiv = styled.div`
   display: flex;
   flex-flow: column wrap;
-  justify-content: flex-end;
   align-items: flex-end;
 `
 const StyledH1 = styled.h1`
-  text-align: right;
-  margin: 0;
+  width: 100%;
+  position: relative;
+  top: 1rem;
+  text-align: left;
   font-family: "Roboto Mono", monospace;
 `
 const StyledNav = styled.nav`
   width: auto;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
 `
 const StyledGithub = styled(Github)`
   color: white;
-  width: 1em;
+  width: 2.5vw;
   &:hover {
     color: #66ff00;
     transform: scale(1.2);
   }
+  @media screen and (min-width: 320px) {
+    width: calc(30px + 6 * ((100vw - 320px) / 680));
+  }
+
 `
 const StyledMailSend = styled(MailSend)`
   color: white;
-  width: 1em;
+  width: 2.5vw;
   &:hover {
     color: #66ff00;
     transform: scale(1.2);
@@ -104,7 +109,7 @@ const StyledMailSend = styled(MailSend)`
 `
 const StyledLinkedIn = styled(LinkedinSquare)`
   color: white;
-  width: 1em;
+  width: 2.5vw;
   &:hover {
     color: #66ff00;
     transform: scale(1.2);
@@ -112,7 +117,7 @@ const StyledLinkedIn = styled(LinkedinSquare)`
 `
 const StyledDevTo = styled(DevTo)`
   color: white;
-  width: 1em;
+  width: 2.5vw;
   &:hover {
     color: #66ff00;
     transform: scale(1.2);
@@ -120,7 +125,7 @@ const StyledDevTo = styled(DevTo)`
 `
 const StyledTwitter = styled(Twitter)`
   color: white;
-  width: 1em;
+  width: 2.5vw;
   &:hover {
     color: #66ff00;
     transform: scale(1.2);
