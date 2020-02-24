@@ -19,6 +19,7 @@ export const StyledBurger = styled.button`
   &:focus {
     outline: none;
   }
+
   div {
     width: 2rem;
     height: 0.25rem;
@@ -28,9 +29,10 @@ export const StyledBurger = styled.button`
     position: relative;
     transform-origin: 1px;
 
-    :first-child {
-      ${({ open }) =>
-        open
+    div:first-child {
+      ${console.log(opened)}
+      ${({ opened }) =>
+        opened
           ? css`
               transform: rotate(45deg);
             `
@@ -39,17 +41,17 @@ export const StyledBurger = styled.button`
             `};
     }
 
-    :nth-child(2) {
-      opacity: ${({ open }) =>
-        open
+    div:nth-child(2) {
+      ${({ opened }) =>
+        opened
           ? css`
               opacity: 0;
             `
           : css`
               opacity: 1;
             `};
-      transform: ${({ open }) =>
-        open
+      ${({ opened }) =>
+        opened
           ? css`
               transform: translateX(20px);
             `
@@ -58,9 +60,9 @@ export const StyledBurger = styled.button`
             `};
     }
 
-    :nth-child(3) {
-      transform: ${({ open }) =>
-        open
+    div:nth-child(3) {
+      ${({ opened }) =>
+        opened
           ? css`
               transform: rotate(-45deg);
             `

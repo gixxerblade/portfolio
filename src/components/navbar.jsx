@@ -5,9 +5,9 @@ import "../styles/global.css"
 import { OpenContext } from "./openContext"
 
 const Navbar = () => {
-  const [open] = useContext(OpenContext)
+  const [opened] = useContext(OpenContext)
   return (
-    <StyledDiv open={open}>
+    <StyledDiv opened={opened}>
       <Link className="navlink" to="/">
         Home
       </Link>
@@ -39,7 +39,7 @@ const StyledDiv = styled.div`
   top: 10em;
   right: 0;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ opened }) => opened ? 'translateX(0)' : 'translateX(100%)'};
 
   .navlink {
     text-decoration: none;
