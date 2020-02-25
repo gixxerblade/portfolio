@@ -10,6 +10,9 @@
   padding: 0;
   z-index: 10;
   margin-left: 1rem;
+  @media screen and (min-width: 320px) {
+    align-self: flex-end;
+  }
 }
 .burger:focus {
   outline: none;
@@ -43,4 +46,9 @@
 }
 .active div:nth-child(3) {
   transform: rotate(-45deg);
+}
+@media screen and (min-width: 320px) {
+  .burger {
+    align-self: right;
+  }
 }

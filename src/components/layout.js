@@ -15,6 +15,7 @@ import StyledFullBackground from "./fullbackground"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import OpenProvider from "./openContext"
+import GlobalFonts from "../fonts/fonts"
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -27,16 +28,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       <OpenProvider>
+        <GlobalFonts />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: "100%",
-          }}
-        >
-          {" "}
+        <div>
           <Navbar />
           <StyledFullBackground>
             <main>{children}</main>
@@ -54,7 +50,7 @@ const Layout = ({ children }) => {
           </StyledFooter>
         </div>
       </OpenProvider>
-    </>
+    </div>
   )
 }
 

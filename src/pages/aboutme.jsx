@@ -9,7 +9,7 @@ const AboutMe = () => {
           I am retired from the United States Marine Corps and live in North
           Carolina. I have a bachelor's degree in Information Technology and
           have completed{" "}
-          <a target="_blank" href="https://www.vetswhocode.io">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.vetswhocode.io">
             Vets Who Code
           </a>
           &nbsp;bootcamp. I am an avid cyclist and like to get my hands dirty in

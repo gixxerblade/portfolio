@@ -37,7 +37,7 @@ const StyledDiv = styled.div`
   position: absolute;
   align-items: center;
   overflow-x: hidden;
-  top: 10em;
+  top: 8em;
   right: 0;
   z-index: 1;
   transition: transform 0.3s ease-in-out;
