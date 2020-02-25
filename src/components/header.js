@@ -18,13 +18,7 @@ const Header = ({ siteTitle }) => {
         height: "8em",
       }}
     >
-      <StyledHeadDiv
-        style={{
-          margin: `0 auto`,
-          maxWidth: "100%",
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
+      <StyledHeadDiv>
         <StyledH1 style={{ margin: 0 }}>
           <Link
             to="/"
@@ -73,6 +67,12 @@ const StyledHeadDiv = styled.div`
   display: flex;
   flex-flow: column wrap;
   align-items: flex-end;
+  max-width: 100%;
+  padding: 1.45rem 1.0875rem;
+  @media screen and (max-width: 320px) {
+    align-items: center;
+    justify-content: center;
+  }
 `
 const StyledH1 = styled.h1`
   width: 100%;
@@ -80,12 +80,20 @@ const StyledH1 = styled.h1`
   top: 1rem;
   text-align: left;
   font-family: "Roboto Mono", monospace;
+  @media screen and (max-width: 320px) {
+    text-align: center;
+    top: 0.1rem;
+  }
 `
 const StyledNav = styled.nav`
-  width: auto;
+  width: 19rem;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  @media screen and (max-width: 320px) {
+    margin-top: 1em;
+    justify-content: space-between;
+  }
 `
 const StyledGithub = styled(Github)`
   color: white;
@@ -97,7 +105,6 @@ const StyledGithub = styled(Github)`
   @media screen and (min-width: 320px) {
     width: calc(30px + 6 * ((100vw - 320px) / 680));
   }
-
 `
 const StyledMailSend = styled(MailSend)`
   color: white;
@@ -105,6 +112,9 @@ const StyledMailSend = styled(MailSend)`
   &:hover {
     color: #66ff00;
     transform: scale(1.2);
+  }
+  @media screen and (min-width: 320px) {
+    width: calc(30px + 6 * ((100vw - 320px) / 680));
   }
 `
 const StyledLinkedIn = styled(LinkedinSquare)`
@@ -114,6 +124,9 @@ const StyledLinkedIn = styled(LinkedinSquare)`
     color: #66ff00;
     transform: scale(1.2);
   }
+  @media screen and (min-width: 320px) {
+    width: calc(30px + 6 * ((100vw - 320px) / 680));
+  }
 `
 const StyledDevTo = styled(DevTo)`
   color: white;
@@ -122,6 +135,9 @@ const StyledDevTo = styled(DevTo)`
     color: #66ff00;
     transform: scale(1.2);
   }
+  @media screen and (min-width: 320px) {
+    width: calc(30px + 6 * ((100vw - 320px) / 680));
+  }
 `
 const StyledTwitter = styled(Twitter)`
   color: white;
@@ -129,5 +145,8 @@ const StyledTwitter = styled(Twitter)`
   &:hover {
     color: #66ff00;
     transform: scale(1.2);
+  }
+  @media screen and (min-width: 320px) {
+    width: calc(30px + 6 * ((100vw - 320px) / 680));
   }
 `
