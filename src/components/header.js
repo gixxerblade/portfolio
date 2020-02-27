@@ -69,9 +69,11 @@ const StyledHeadDiv = styled.div`
   align-items: flex-end;
   max-width: 100%;
   padding: 1.45rem 1.0875rem;
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 412px) {
+    display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
   }
 `
 const StyledH1 = styled.h1`
@@ -80,9 +82,8 @@ const StyledH1 = styled.h1`
   top: 1rem;
   text-align: left;
   font-family: "Roboto Mono", monospace;
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 412px) {
     text-align: center;
-    top: 0.1rem;
   }
 `
 const StyledNav = styled.nav`
@@ -90,8 +91,8 @@ const StyledNav = styled.nav`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  @media screen and (max-width: 320px) {
-    margin-top: 1em;
+  @media screen and (max-width: 412px) {
+    margin-top: 2rem;
     justify-content: space-between;
   }
 `

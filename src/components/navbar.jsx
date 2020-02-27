@@ -41,7 +41,11 @@ const StyledDiv = styled.div`
   right: 0;
   z-index: 1;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ opened }) => opened ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ opened }) => (opened ? "translateX(0)" : "translateX(100%)")};
+  @media screen and (max-width: 412px) {
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 99;
+  }
 
   .navlink {
     text-decoration: none;
