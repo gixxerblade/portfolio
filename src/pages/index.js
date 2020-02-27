@@ -11,9 +11,9 @@ export default () => {
     <>
       <Router>
         <Home path="/" />
-        <AboutMe path="aboutme" />
-        <Projects path="projects" />
-        <Contact path="contact" />
+        <AboutMe path="/aboutme" />
+        <Projects path="/projects" />
+        <Contact path="/contact" />
         <NotFoundPage default />
       </Router>
     </>
