@@ -50,7 +50,7 @@ const FullBackground = ({ className, children }) => {
 
 const StyledFullBackground = styled(FullBackground)`
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
