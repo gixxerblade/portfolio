@@ -9,7 +9,6 @@ import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import styled from "styled-components"
-const link = "https://dev.to/vetswhocode/build-a-crud-firestore-app-in-react-gatsby-with-hooks-4ig9"
 const text = {
   project1: {
     title: "Angry Pickles",
@@ -43,7 +42,7 @@ const MediaCard = props => {
   const items = Object.entries(text).map((key, value) => {
     console.log(key[1].title)
     return (
-      <li key={key}>
+      <StyledLI key={key}>
         <Card className={classes.card}>
           <CardActionArea>
             <CardMedia
@@ -67,7 +66,7 @@ const MediaCard = props => {
             </Button>
           </CardActions>
         </Card>
-      </li>
+      </StyledLI>
     )
   })
   return <StyledUL>{items}</StyledUL>
@@ -79,9 +78,12 @@ MediaCard.propTypes = {
 
 export default withStyles(styles)(MediaCard)
 
-const StyledUL = styled.ul `
-display: flex;
-flex-flow: row wrap;
-list-style-type: none;
-justify-content: space-evenly;
+const StyledUL = styled.ul`
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: space-around;
+`
+const StyledLI = styled.li`
+  margin: 1rem;
 `
