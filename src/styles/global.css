@@ -16,6 +16,7 @@ body {
   font-weight: 600;
   font-size: 2rem;
   margin-top: 3em;
+  overflow-x: hidden;
 }
 .typedString {
   color: black;
