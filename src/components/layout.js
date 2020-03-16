@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <StyledLayoutDiv>
       <OpenProvider>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
           </StyledFooter>
         </div>
       </OpenProvider>
-    </div>
+    </StyledLayoutDiv>
   )
 }
 
@@ -63,4 +63,12 @@ const StyledFooter = styled.footer`
   color: white;
   background: black;
   font-family: "Roboto Mono", monospace;
+`
+const StyledLayoutDiv = styled.div`
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow-x: hidden;
+  }
 `
