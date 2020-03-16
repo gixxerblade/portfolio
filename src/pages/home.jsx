@@ -4,6 +4,7 @@ import Typed from "react-typed"
 import { Link } from "@reach/router"
 import "../styles/global.css"
 import SEO from "../components/seo"
+import styled from "styled-components"
 const Home = () => (
   <>
     <Layout>
@@ -22,11 +23,21 @@ const Home = () => (
           smartBackspace
           loop
         />
-        <Link className="letstalk" to="contact">
+        <StyledLetsTalk className="letstalk" to="contact">
           Let's Talk...
-        </Link>
+        </StyledLetsTalk>
       </div>
     </Layout>
   </>
 )
 export default Home
+
+const StyledLetsTalk = styled(Link)`
+  color: #413c69;
+  transition: 0.2s linear;
+  &:hover {
+    transition: 0.2s linear;
+    color: #4a47a3;
+    font-size: 2rem;
+  }
+`

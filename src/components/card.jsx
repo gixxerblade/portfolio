@@ -9,6 +9,9 @@ import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import styled from "styled-components"
+import Grid from "@material-ui/core/Grid"
+import { makeStyles } from "@material-ui/core/styles"
+
 const text = {
   project1: {
     title: "Angry Pickles",
@@ -22,27 +25,37 @@ const text = {
     title: "Create, Read, Update, and Delete Tutorial Application",
     description:
       'Created an application to demonstrate a "how-to" using Gatsby and React, utilizing Google Firestore NoSQL database for data storage.',
-    source: "https://github.com/gixxerblade/Gatsby-CRUD-Tutorial-",
+    source:
+      "https://dev.to/vetswhocode/build-a-crud-firestore-app-in-react-gatsby-with-hooks-4ig9",
     link: "https://codesandbox.io/s/gatsby-crud-tutorial-c6xs1",
     images: "https://i.ibb.co/QdL9MW7/editing-Works.gif",
   },
 }
 
-const styles = {
+const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 600,
+    maxWidth: 700,
   },
   media: {
-    height: 100,
+    height: 200,
+    [theme.breakpoints.down("xs")]: {
+      height: 0,
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: 100,
+    },
   },
-}
+  typography: {
+    fontSize: 10,
+  }
+}))
 const MediaCard = props => {
-  const { classes } = props
+  const classes = useStyles(props)
   console.log(text)
   const items = Object.entries(text).map((key, value) => {
     console.log(key[1].title)
     return (
-      <StyledLI key={key}>
+      <StyledCardDiv key={key}>
         <Card className={classes.card}>
           <CardActionArea>
             <CardMedia
@@ -50,12 +63,12 @@ const MediaCard = props => {
               image={key[1].images}
               title={key[1].title}
             />
-            <CardContent>
+            <StyledCardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 {key[1].title}
               </Typography>
-              <Typography component="p">{key[1].description}</Typography>
-            </CardContent>
+              <Typography fontSize={10} component="p">{key[1].description}</Typography>
+            </StyledCardContent>
           </CardActionArea>
           <CardActions>
             <Button href={key[1].source} size="small" color="primary">
@@ -66,24 +79,30 @@ const MediaCard = props => {
             </Button>
           </CardActions>
         </Card>
-      </StyledLI>
+      </StyledCardDiv>
     )
   })
-  return <StyledUL>{items}</StyledUL>
+  return (
+    <Grid container direction="row" justify="center" alignItems="center">
+      {items}
+    </Grid>
+  )
 }
 
-MediaCard.propTypes = {
+/* MediaCard.propTypes = {
   classes: PropTypes.object.isRequired,
 }
+ */
+export default MediaCard
 
-export default withStyles(styles)(MediaCard)
-
-const StyledUL = styled.ul`
-  display: flex;
-  flex-flow: row wrap;
-  list-style-type: none;
-  justify-content: space-around;
-`
-const StyledLI = styled.li`
+const StyledCardDiv = styled.div`
   margin: 1rem;
+  list-style-type: none;
+`
+const StyledCardContent = styled(CardContent)`
+  height: 15rem;
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    height: 12rem;
+  }
 `

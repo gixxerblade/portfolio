@@ -8,6 +8,7 @@ import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
 import { DevTo } from "styled-icons/boxicons-logos/DevTo"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import { Link } from "gatsby"
+import Grid from '@material-ui/core/Grid';
 const Contact = () => {
   const StyledEmailIcon = withStyledIcon(AlternateEmail)
   const StyledGithubIcon = withStyledIcon(Github)
@@ -18,33 +19,34 @@ const Contact = () => {
     <Layout>
       <StyledDiv>
         <h1>Contact</h1>
-        <StyledIconUL>
-          <li>
+        <h2>Contact me using the @ or check out my social media links.</h2>
+        <Grid container direction="row" justify="space-evenly" alignItems="center">
+          <div>
             <Link to="mailto:sdclarkie@gmail.com">
               <StyledEmailIcon title="Email" />
             </Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="https://github.com/gixxerblade">
               <StyledGithubIcon title="GitHub" />
             </Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="https://www.linkedin.com/in/stephen-clark-5319406/">
               <StyledLinkedIn title="LinkedIn" />
             </Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="https://twitter.com/gixxerblade">
               <StyledTwitter title="Twitter" />
             </Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to="https://dev.to/gixxerblade">
               <StyledDevTo title="DevTo" />
             </Link>
-          </li>
-        </StyledIconUL>
+          </div>
+        </Grid>
       </StyledDiv>
     </Layout>
   )

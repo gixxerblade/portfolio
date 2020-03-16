@@ -38,6 +38,18 @@ const StyledDiv = styled.div`
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition: 0.3s linear;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+  &:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     height: 50vh;
     width: 100%;
