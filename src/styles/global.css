@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 .frontpagewrapper {
   height: 100vh;
@@ -11,6 +16,7 @@
   font-weight: 600;
   font-size: 2rem;
   margin-top: 3em;
+  overflow-x: hidden;
 }
 .typedString {
   color: black;
@@ -27,13 +33,13 @@
   z-index: 99;
   text-align: center;
 }
-.not-found-wrapper{
-  display:flex;
+.not-found-wrapper {
+  display: flex;
   flex-flow: column nowrap;
   text-align: center;
-
 }
-.sadface,.not-found-text {
+.sadface,
+.not-found-text {
   font-size: 1.5rem;
   font-weight: 600;
   height: 50vh;

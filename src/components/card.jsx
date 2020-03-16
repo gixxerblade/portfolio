@@ -33,7 +33,7 @@ const styles = {
     maxWidth: 600,
   },
   media: {
-    height: 200,
+    height: 100,
   },
 }
 const MediaCard = props => {
