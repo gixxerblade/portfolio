@@ -6,6 +6,7 @@ const Burger = () => {
   return (
     <>
       <button
+        htmlFor="Menu"
         className={`burger ${opened ? "active" : ""}`}
         onClick={() => setOpened(!opened)}
       >

@@ -8,7 +8,7 @@ import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
 import { DevTo } from "styled-icons/boxicons-logos/DevTo"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import { Link } from "gatsby"
-import Grid from '@material-ui/core/Grid';
+import Grid from "@material-ui/core/Grid"
 const Contact = () => {
   const StyledEmailIcon = withStyledIcon(AlternateEmail)
   const StyledGithubIcon = withStyledIcon(Github)
@@ -20,29 +20,49 @@ const Contact = () => {
       <StyledDiv>
         <h1>Contact</h1>
         <h2>Contact me using the @ or check out my social media links.</h2>
-        <Grid container direction="row" justify="space-evenly" alignItems="center">
+        <Grid
+          container
+          direction="row"
+          justify="space-evenly"
+          alignItems="center"
+        >
           <div>
-            <Link to="mailto:sdclarkie@gmail.com">
+            <Link
+              aria-label="External link to email me"
+              to="mailto:sdclarkie@gmail.com"
+            >
               <StyledEmailIcon title="Email" />
             </Link>
           </div>
           <div>
-            <Link to="https://github.com/gixxerblade">
+            <Link
+              aria-label="External link to Github"
+              to="https://github.com/gixxerblade"
+            >
               <StyledGithubIcon title="GitHub" />
             </Link>
           </div>
           <div>
-            <Link to="https://www.linkedin.com/in/stephen-clark-5319406/">
+            <Link
+              aria-label="External link to LinkedIn"
+              to="https://www.linkedin.com/in/stephen-clark-5319406/"
+            >
               <StyledLinkedIn title="LinkedIn" />
             </Link>
           </div>
           <div>
-            <Link to="https://twitter.com/gixxerblade">
+            <Link
+              aria-label="External link to Twitter"
+              to="https://twitter.com/gixxerblade"
+            >
               <StyledTwitter title="Twitter" />
             </Link>
           </div>
           <div>
-            <Link to="https://dev.to/gixxerblade">
+            <Link
+              aria-label="External link to a developer community of software developers"
+              to="https://dev.to/gixxerblade"
+            >
               <StyledDevTo title="DevTo" />
             </Link>
           </div>
