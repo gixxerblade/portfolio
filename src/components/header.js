@@ -11,24 +11,10 @@ import Burger from "./burger"
 import "../styles/header.css"
 const Header = ({ siteTitle }) => {
   return (
-    <header
-      style={{
-        background: `black`,
-        marginBottom: `0rem`,
-        height: "8em",
-      }}
-    >
+    <StyledHeader>
       <StyledHeadDiv>
-        <StyledH1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
+        <StyledH1>
+          <StyledH1Link to="/">{siteTitle}</StyledH1Link>
         </StyledH1>
         <StyledNav>
           <a href="mailto:sdclarkie@gmail.com">
@@ -49,7 +35,7 @@ const Header = ({ siteTitle }) => {
           <Burger />
         </StyledNav>
       </StyledHeadDiv>
-    </header>
+    </StyledHeader>
   )
 }
 
@@ -58,10 +44,17 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Stephen Clark`,
 }
 
 export default Header
+
+const StyledHeader = styled.header`
+  background: #000;
+  margin-bottom: 0rem;
+  height: 8em;
+  width: 100%;
+`
 
 const StyledHeadDiv = styled.div`
   display: flex;
@@ -69,11 +62,11 @@ const StyledHeadDiv = styled.div`
   align-items: flex-end;
   max-width: 100%;
   padding: 1.45rem 1.0875rem;
-  @media screen and (max-width: 412px) {
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding-top: 0;
   }
 `
 const StyledH1 = styled.h1`
@@ -82,17 +75,29 @@ const StyledH1 = styled.h1`
   top: 1rem;
   text-align: left;
   font-family: "Roboto Mono", monospace;
-  @media screen and (max-width: 412px) {
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
     text-align: center;
+    align-self:flex-start;
+  }
+
+`
+const StyledH1Link = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: #66ff00;
+    transform: scale(1.2);
+    cursor: pointer;
   }
 `
+
 const StyledNav = styled.nav`
   width: 19rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  @media screen and (max-width: 412px) {
-    margin-top: 2rem;
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    
     justify-content: space-between;
   }
 `

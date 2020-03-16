@@ -36,7 +36,7 @@ const StyledDiv = styled.div`
   justify-content: flex-start;
   position: absolute;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
   top: 8em;
   right: 0;
   z-index: 1;
@@ -45,6 +45,7 @@ const StyledDiv = styled.div`
   @media screen and (max-width: 412px) {
     background-color: rgba(0, 0, 0, 1);
     z-index: 99;
+    overflow: hidden;
   }
 
   .navlink {

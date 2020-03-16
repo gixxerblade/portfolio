@@ -36,6 +36,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { name: `data`, path: `${__dirname}/src/data` },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Roboto Mono", "Mono"],
+        },
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
