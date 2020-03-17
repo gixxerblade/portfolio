@@ -2,17 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import { Github } from "styled-icons/boxicons-logos/Github"
-import { MailSend } from "styled-icons/boxicons-regular/MailSend"
-import { LinkedinSquare } from "styled-icons/boxicons-logos/LinkedinSquare"
-import { DevTo } from "styled-icons/boxicons-logos/DevTo"
-import { Twitter } from "styled-icons/fa-brands/Twitter"
 import Burger from "./burger"
 import "../styles/header.css"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import DesktopNavbar from "./desktop-navbar"
 const Header = ({ siteTitle }) => {
-  const size = useMediaQuery("(max-width:700px)")
+  const size = useMediaQuery('(max-width:812px)')
 
   return (
     <StyledHeader>
