@@ -84,8 +84,9 @@ const StyledDiv = styled.div`
   justify-content: flex-start;
 `
 
-const StyledIconUL = styled.ul`
+/* const StyledIconUL = styled.ul`
   list-style-type: none;
   width: 50%;
   text-align: center;
 `
+ */

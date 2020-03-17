@@ -30,6 +30,7 @@ const AboutMe = () => {
 export default AboutMe
 const StyledDiv = styled.div`
   height: 30vh;
+  border-radius: 1em;
   width: 65%;
   display: flex;
   flex-flow: column nowrap;
