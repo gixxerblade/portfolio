@@ -9,31 +9,19 @@ import { DevTo } from "styled-icons/boxicons-logos/DevTo"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import Burger from "./burger"
 import "../styles/header.css"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+import DesktopNavbar from "./desktop-navbar"
 const Header = ({ siteTitle }) => {
+  const size = useMediaQuery("(max-width:700px)")
+
   return (
     <StyledHeader>
       <StyledHeadDiv>
         <StyledH1>
           <StyledH1Link to="/">{siteTitle}</StyledH1Link>
         </StyledH1>
-        <StyledNav>
-          <a href="mailto:sdclarkie@gmail.com">
-            <StyledMailSend />
-          </a>
-          <a href="https://github.com/gixxerblade">
-            <StyledGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/stephen-clark-5319406/">
-            <StyledLinkedIn />
-          </a>
-          <a href="https://twitter.com/gixxerblade">
-            <StyledTwitter />
-          </a>
-          <a href="https://dev.to/gixxerblade">
-            <StyledDevTo />
-          </a>
-          <Burger />
-        </StyledNav>
+        {size && <Burger />}
+        {!size && <DesktopNavbar />}
       </StyledHeadDiv>
     </StyledHeader>
   )
@@ -77,9 +65,8 @@ const StyledH1 = styled.h1`
   font-family: "Roboto Mono", monospace;
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     text-align: center;
-    align-self:flex-start;
+    align-self: flex-start;
   }
-
 `
 const StyledH1Link = styled(Link)`
   color: #fff;
@@ -91,68 +78,3 @@ const StyledH1Link = styled(Link)`
   }
 `
 
-const StyledNav = styled.nav`
-  width: 19rem;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  @media only screen and (min-width: 320px) and (max-width: 480px) {
-    
-    justify-content: space-between;
-  }
-`
-const StyledGithub = styled(Github)`
-  color: white;
-  width: 2.5vw;
-  &:hover {
-    color: #66ff00;
-    transform: scale(1.2);
-  }
-  @media screen and (min-width: 320px) {
-    width: calc(30px + 6 * ((100vw - 320px) / 680));
-  }
-`
-const StyledMailSend = styled(MailSend)`
-  color: white;
-  width: 2.5vw;
-  &:hover {
-    color: #66ff00;
-    transform: scale(1.2);
-  }
-  @media screen and (min-width: 320px) {
-    width: calc(30px + 6 * ((100vw - 320px) / 680));
-  }
-`
-const StyledLinkedIn = styled(LinkedinSquare)`
-  color: white;
-  width: 2.5vw;
-  &:hover {
-    color: #66ff00;
-    transform: scale(1.2);
-  }
-  @media screen and (min-width: 320px) {
-    width: calc(30px + 6 * ((100vw - 320px) / 680));
-  }
-`
-const StyledDevTo = styled(DevTo)`
-  color: white;
-  width: 2.5vw;
-  &:hover {
-    color: #66ff00;
-    transform: scale(1.2);
-  }
-  @media screen and (min-width: 320px) {
-    width: calc(30px + 6 * ((100vw - 320px) / 680));
-  }
-`
-const StyledTwitter = styled(Twitter)`
-  color: white;
-  width: 2.5vw;
-  &:hover {
-    color: #66ff00;
-    transform: scale(1.2);
-  }
-  @media screen and (min-width: 320px) {
-    width: calc(30px + 6 * ((100vw - 320px) / 680));
-  }
-`
