@@ -17,7 +17,7 @@ const FullBackground = ({ className, children }) => {
       query {
         desktop: file(relativePath: { eq: "ireland.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
+            fluid(quality: 70, maxWidth: 4160) {
               ...GatsbyImageSharpFluid
             }
           }
