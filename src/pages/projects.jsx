@@ -19,7 +19,7 @@ const Projects = () => {
 export default Projects
 
 const StyledDiv = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
