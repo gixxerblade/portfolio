@@ -16,7 +16,7 @@ const text = {
     description:
       "An ecommerce application to create a storefront with Gatsby, Stripe, & Netlify Functions.",
     source: "https://github.com/gixxerblade/Angry-Pickles",
-    link: "https://angrypickles.netlify.com/",
+    link: "https://angrypickles.com/home",
     images: "https://i.ibb.co/pdv2kRk/angrypickle.jpg",
   },
   project2: {
