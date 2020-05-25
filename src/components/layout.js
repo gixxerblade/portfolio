@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
         <div>
           <Navbar />
           <StyledFullBackground>
-            <main>{children}</main>
+           {children}
           </StyledFullBackground>
           <StyledFooter>
             <Link
@@ -65,7 +65,8 @@ const StyledFooter = styled.footer`
   font-family: "Roboto Mono", monospace;
 `
 const StyledLayoutDiv = styled.div`
-  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    overflow-x: hidden;
+  @media only screen and (min-width: 320px) and (max-width: 1024px) {
     width: 100%;
     height: 100vh;
     position: absolute;
