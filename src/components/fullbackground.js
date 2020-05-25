@@ -53,6 +53,9 @@ const StyledFullBackground = styled(FullBackground)`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: bottom center;
+  background-repeat: repeat-y;
+  background-size: cover;
 `
 
 export default StyledFullBackground

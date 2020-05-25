@@ -9,6 +9,7 @@ import { DevTo } from "styled-icons/boxicons-logos/DevTo"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import { Link } from "gatsby"
 import Grid from "@material-ui/core/Grid"
+
 const Contact = () => {
   const StyledEmailIcon = withStyledIcon(AlternateEmail)
   const StyledGithubIcon = withStyledIcon(Github)

@@ -7,20 +7,33 @@ const AboutMe = () => {
       <Container>
         <StyledDiv>
           <StyledP>
-            I am retired from the United States Marine Corps and live in North
-            Carolina. I have a bachelor's of science in Information Technology
-            and have completed&nbsp;
-            <A
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.vetswhocode.io"
-            >
-              Vets Who Code
-            </A>
-            ,&nbsp;a web development training program (Bootcamp). I am an avid
-            cyclist and like to get my hands dirty in the garden. I have created
-            a small business where I make gourmet pickles named&nbsp;
-            <A href="https://www.angrypickles.com">Angry Pickles</A>.
+          I’m a product focused Javascript developer and entrepreneur based in
+        North Carolina. After my tenure with Marine Corps, I shifted focus to
+        the technology sector and obtained a Bachelors of Science in Information
+        Technology. Not one to leave anything to chance, along with the passion
+        to become the best version of me, I signed up for a program named{" "}
+        <A
+          target="_blank"
+          rel="noopener noreferrer"
+          href="www.vetswhocode.io"
+        >
+          Vets Who Code
+        </A>
+        . I went through their course work to learn not only how to become a
+        better programmer but to actually understand the craft of building
+        products for the web with a{" "}
+        <span style={{ textDecoration: "underline" }}>team</span>. When I was
+        not learning I focused on building a company named{" "}
+        <A
+          target="_blank"
+          rel="noopener noreferrer"
+          href="www.angrypickles.com"
+        >
+          Angry Pickles.
+        </A>
+        . I am proud to have built a product from scratch that actually provides
+        revenue and makes people happy. When I am not building, learning or
+        making pickles, I am an avid Cyclist and Gardener.
           </StyledP>
         </StyledDiv>
       </Container>
@@ -29,18 +42,16 @@ const AboutMe = () => {
 }
 export default AboutMe
 const StyledDiv = styled.div`
-  height: 30vh;
+  height: auto;
   border-radius: 1em;
   width: 65%;
   display: flex;
   flex-flow: column nowrap;
-  margin-top: 10rem;
+  margin-top: 5rem;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 0.3s;
   transition: 0.3s linear;
@@ -48,19 +59,19 @@ const StyledDiv = styled.div`
   transition-property: box-shadow, transform;
   &:hover {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
   }
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     height: 50vh;
     width: 100%;
     margin-top: 0;
     justify-content: flex-start;
+    border-radius: 0em;
+
   }
 `
 const StyledP = styled.p`
   width: 85%;
-  font-size: 1.3rem;
+  font-size: auto;
   text-align: justify;
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     font-size: 1rem;
@@ -80,6 +91,5 @@ const A = styled.a`
   &:hover {
     transition: 0.2s linear;
     color: #bae5e5;
-    font-size: 1.34rem;
   }
 `

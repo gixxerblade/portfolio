@@ -10,7 +10,7 @@ export const StyledWrapper = styled.div`
 
 export const StyledFullScreenWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   overflow: hidden;
 `
