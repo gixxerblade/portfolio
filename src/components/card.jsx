@@ -22,7 +22,7 @@ const text = {
   project2: {
     title: "Create, Read, Update, and Delete Tutorial Application",
     description:
-      'Created an application to demonstrate persistent storage using Gatsby and React, utilizing Google Firestore for data storage.',
+      "Created an application to demonstrate persistent storage using Gatsby and React, utilizing Google Firestore for data storage.",
     source:
       "https://dev.to/vetswhocode/build-a-crud-firestore-app-in-react-gatsby-with-hooks-4ig9",
     link: "https://codesandbox.io/s/gatsby-crud-tutorial-c6xs1",
@@ -36,6 +36,14 @@ const text = {
       "https://dev.to/vetswhocode/react-tutorial-upload-and-fetch-photos-with-cloudinary-2ec9",
     link: "http://profile-card-tut.surge.sh/",
     images: "https://i.ibb.co/fQTW1M0/vwc.jpg",
+  },
+  project4: {
+    title: "Scoreboard",
+    description:
+      "As part of a coding challenge for Vet's Who Code, I made a simple scoreboard using React",
+    source: "https://github.com/gixxerblade/scoreboard",
+    link: "http://scoreboard-project.surge.sh/",
+    images: "https://i.ibb.co/nk307DC/scoreboard.png",
   },
 }
 
@@ -59,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 10,
     [theme.breakpoints.down("sm")]: {
       fontSize: 8,
-    }
+    },
   },
 }))
 const MediaCard = props => {
